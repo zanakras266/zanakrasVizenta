@@ -1,0 +1,410 @@
+:root {
+  --primary-color: #00c2cb;
+  --secondary-color: #84cfb4;
+  --third-color: #fec560;
+  --fourth-color: #ac92d2;
+  --fifth-color: #6dbea6;
+  --sixth-color: #7961ae;
+  --seventh-color: #fc9f66;
+}
+/* declaration of fonts */
+@font-face {
+  font-family: rubik black;
+  src: url(./fonts/Rubik-Black.ttf);
+}
+@font-face {
+  font-family: rubik black italic;
+  src: url(./fonts/Rubik-BlackItalic.ttf);
+}
+@font-face {
+  font-family: rubik bold;
+  src: url(./fonts/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: rubik bold italic;
+  src: url(./fonts/Rubik-BoldItalic.ttf);
+}
+@font-face {
+  font-family: rubik extra bold;
+  src: url(./fonts/Rubik-ExtraBold.ttf);
+}
+@font-face {
+  font-family: rubik extra bold italic;
+  src: url(./fonts/Rubik-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: rubik italic;
+  src: url(./fonts/Rubik-Italic.ttf);
+}
+@font-face {
+  font-family: rubik light;
+  src: url(./fonts/Rubik-Light.ttf);
+}
+@font-face {
+  font-family: rubik light face;
+  src: url(./fonts/Rubik-LightItalic.ttf);
+}
+@font-face {
+  font-family: rubik medium;
+  src: url(./fonts/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: rubik medium italic;
+  src: url(./fonts/Rubik-MediumItalic.ttf);
+}
+@font-face {
+  font-family: rubik regular;
+  src: url(./fonts/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: rubik semi bold;
+  src: url(./fonts/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: rubik semi bold italic;
+  src: url(./fonts/Rubik-SemiBoldItalic.ttf);
+}
+body {
+  font-family: rubik black;
+  padding: 0%;
+  background-color: rgb(206, 121, 212);
+}
+/* header style */
+
+header.zkHeader {
+  background-color: #7961ae;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0%;
+}
+header.zkHeader .zkMainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.zkHeader .zkLogo {
+  display: flex;
+  align-items: center;
+}
+header.zkHeader .zkLogo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header.zkHeader .zkMainNav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+header.zkHeader .zkMainNav ul li {
+  margin: 0 15px;
+}
+header.zkHeader .zkMainNav ul li a {
+  text-decoration: none;
+  font-family: rubik semi bold;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+  text-shadow: 0.3s;
+}
+header.zkHeader .zkMainNav ul li a:hover {
+  transform: translateY(4px);
+  color: var(--third-color);
+  display: inline-block;
+}
+/* this is the end of header */
+.zkMainSection {
+  background-color: var(--sixth-color);
+
+  /* layered gradient to match logo colors and add depth */
+  background-image: radial-gradient(
+      800px 400px at 10% 20%,
+      rgba(255, 255, 255, 0.06),
+      transparent 20%
+    ),
+    radial-gradient(
+      600px 300px at 90% 80%,
+      rgba(0, 0, 0, 0.06),
+      transparent 20%
+    ),
+    linear-gradient(
+      135deg,
+      var(--sixth-color) 0%,
+      var(--fourth-color) 28%,
+      var(--primary-color) 56%,
+      var(--third-color) 84%
+    );
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: #fff;
+
+  /* spacing and subtle elevation so the section reads as a card */
+  padding: 6px 2px;
+  box-shadow: 0 12px 30px rgba(11, 8, 24, 0.25);
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.zkMainSection .zkMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  top: 140px;
+  bottom: 50px;
+}
+.zkMainSection .zkMainDiv h1 {
+  font-family: rubik bold;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px 20px;
+}
+.zkMainSection .zkMainDiv p {
+  font-family: rubik light;
+  font-size: 20px;
+  text-align: center;
+  padding: 0px 10px;
+}
+.zkMainSection .zkMainDiv a {
+  font-family: rubik semi bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: var(--seventh-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+.zkMainSection .zkMainDiv a:hover {
+  background-color: var(--third-color);
+  transform: translateY(-3px);
+}
+/* start of styling zkCreatvity section */
+.zkCreatvity {
+  margin-left: 250px;
+}
+.zkCreatvity .zkContainer .zkRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+.zkCreatvity .zkContainer {
+  padding: 60px 20px;
+  color: #000000;
+}
+.zkCreatvity .zkContainer .zkRow .zkColOne {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: justify;
+}
+.zkCreatvity .zkContainer .zkRow .zkColTwo video {
+  width: 60%;
+  height: auto;
+}
+.zkCreatvity .zkContainer .zkRow .zkColOne h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: rubik semi bold;
+}
+.zkCreatvity .zkContainer .zkRow .zkColOne p {
+  font-family: rubik light;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.zkCreatvity .zkContainer .zkRow .zkColOne a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: rubik semi bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.zkCreatvity .zkContainer .zkRow .zkColOne a:hover {
+  background-color: var(--third-color);
+  transform: translateY(-3px);
+}
+/* start of styling AIfirstTechnology */
+.zkAIfirstTechnology {
+  background-color: var(--fifth-color);
+  padding: 60px 20px;
+  color: #000000;
+  text-align: center;
+  padding: 80px 20px;
+}
+.zkAIfirstTechnology .zkAIContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.zkAIfirstTechnology .zkAIContainer h1 {
+  font-family: rubik bold;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.zkAIfirstTechnology .zkAIContainer p {
+  font-family: rubik light;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+.zkAIfirstTechnology .zkAIContainer a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: rubik semi bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.zkAIfirstTechnology .zkAIContainer a:hover {
+  background-color: var(--third-color);
+  transform: translateY(-3px);
+}
+/* Style of the cards */
+/* NOTE: HTML uses the class name `zkCardContanier` (typo) and a `.zkCardRow` wrapper.
+   Target the actual DOM classes and lay out the direct children as equal-width cards. */
+.zkCards .zkCardContanier {
+  padding: 40px 20px;
+  
+}
+.zkCards .zkCardRow {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center; /* make all cards same height */
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+.zkCards .zkCardContanier .zkFirstCard,
+.zkSecondCard,
+.zkThirdCard,
+.zkFourthCard {
+  display: flex;
+  justify-content: justify;
+  margin: 20px;
+  border: 2px solid rgb(228, 139, 217);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  flex-basis: 30%;
+}
+/* style of icons */
+.zkCards .zkCardContanier .zkFirstCard i,
+.zkSecondCard i,
+.zkThirdCard i,
+.zkFourthCard i {
+  font-size: 50px;
+  color: rgb(228, 139, 217);
+  margin-bottom: 15px;
+
+}
+.zkCards .zkCardContanier .zkFirstCard:hover,
+.zkSecondCard:hover,
+.zkThirdCard:hover,
+.zkFourthCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.zkCards .zkFirstCard a,
+.zkSecondCard a,
+.zkThirdCard a,
+.zkFourthCard a {
+  font-family: rubik semi bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.zkCards .zkFirstCard a:hover {
+  transform: translateY(-3px);
+  background-color: var(--third-color);
+}
+.zkCards .zkSecondCard a:hover {
+  transform: translateY(-3px);
+  background-color: var(--third-color);
+}
+.zkCards .zkThirdCard a:hover {
+  transform: translateY(-3px);
+  background-color: var(--third-color);
+}
+.zkCards .zkFourthCard a:hover {
+  transform: translateY(-3px);
+  background-color: var(--third-color);
+}
+/* contact section */
+.zkLastQuestion {
+  background-color: var(--fourth-color);
+  padding: 60px 20px;
+  color: #000000;
+  text-align: center;
+}
+.zkLastQuestion .zkQuestionContainer h2 {
+  font-family: rubik bold;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.zkLastQuestion .zkQuestionContainer p {
+  font-family: rubik light;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.zkLastQuestion .zkQuestionContainer a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: rubik semi bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.zkLastQuestion .zkQuestionContainer a:hover {
+  background-color: rgb(228, 139, 217);
+  transform: translateY(-3px);
+}
+/* start of footer */
+.zkFooter {
+  background-color: #7961ae;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
