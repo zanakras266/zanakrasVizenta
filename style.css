@@ -408,3 +408,27 @@ header.zkHeader .zkMainNav ul li a:hover {
   color: white;
   text-decoration: none;
 }
+/* media query style for mobile and large devices */
+@media screen and (max-width: 768px) {
+  .zkCreatvity {
+    margin-left: 0;
+  }
+  .zkCreatvity .zkContainer .zkRow {
+    flex-direction: column;
+  }
+  .zkCreatvity .zkContainer .zkRow .zkColTwo video {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .zkCards .zkCardRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .zkCards .zkCardContanier .zkFirstCard,
+  .zkSecondCard,
+  .zkThirdCard,
+  .zkFourthCard {
+    flex-basis: 80%;
+    margin-bottom: 20px;
+  }
+}
