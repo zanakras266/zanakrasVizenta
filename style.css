@@ -283,7 +283,6 @@ header.zkHeader .zkMainNav ul li a:hover {
    Target the actual DOM classes and lay out the direct children as equal-width cards. */
 .zkCards .zkCardContanier {
   padding: 40px 20px;
-  
 }
 .zkCards .zkCardRow {
   display: flex;
@@ -318,7 +317,6 @@ header.zkHeader .zkMainNav ul li a:hover {
   font-size: 50px;
   color: rgb(228, 139, 217);
   margin-bottom: 15px;
-
 }
 .zkCards .zkCardContanier .zkFirstCard:hover,
 .zkSecondCard:hover,
@@ -410,50 +408,71 @@ header.zkHeader .zkMainNav ul li a:hover {
 }
 /* media query style for mobile and large devices */
 @media screen and (max-width: 768px) {
-  body{
+  body {
     overflow-x: hidden;
     width: fit-content;
   }
- header.zkHeader .zkMainNav ul {
-  
-            flex-direction: column;
-            background: #1f1f1f;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            display: none; 
-        }
-        
-        .burger {
-            display: block;
-        }
+  header.zkHeader .zkMainNav ul {
+    flex-direction: column;
+    background: #1f1f1f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
 
-       
-        .emNavLinks {
-            display: none;
-            flex-direction: column;
-            background: #1f1f1f;
-            width: 100%;
-            padding: 20px;
-            position: absolute;
-            top: 70px;
-            left: 0;
-        }
+  .burger {
+    display: block;
+  }
 
-       
-        .emNavLinks.active {
-            display: flex;
-        }
+  .emNavLinks {
+    display: none;
+    flex-direction: column;
+    background: #1f1f1f;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
 
-        .emNavLinks li a {
-            color: black;
-            padding: 10px 0;
-            display: block;
-        }
-        /* style of zk Creativity */
-        .zkCreatvity .zkContainer .zkRow {
-          margin: 0px;
-          flex-direction: column;
-        }
+  .emNavLinks.active {
+    display: flex;
+  }
+
+  .emNavLinks li a {
+    color: black;
+    padding: 10px 0;
+    display: block;
+  }
+  /* style of zk Creativity */
+ 
+  .zkCreatvity {
+    margin-left: 0; /* override desktop offset on small screens */
+  }
+
+  .zkCreatvity .zkContainer {
+    padding: 20px 16px;
+  }
+  .zkCreatvity .zkContainer .zkColOne {
+    color: #000;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 16px;
+    box-sizing: border-box;
+    padding: 18px;
+    flex-basis: 100%;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .zkCreatvity .zkContainer video{
+    display: none;
+  }
+  /* style of four cards */
+  .zkCards .zkCardContanier .zkCardRow{
+  flex-direction: column;
+  }
+
 }
