@@ -410,37 +410,50 @@ header.zkHeader .zkMainNav ul li a:hover {
 }
 /* media query style for mobile and large devices */
 @media screen and (max-width: 768px) {
-  .zkHeader .zkMainNav ul {
-    flex-direction: column;
-    align-items: flex-start;
+  body{
+    overflow-x: hidden;
+    width: fit-content;
   }
-  .zkHeader .zkMainNav ul li {
-    margin: 10px 0;
-   }
-   .zkNavLinks{
-    display: none;
-   }
-   .burgerMenu {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-   }
-   .zkNavLinks.active {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #7961ae;
-    padding: 10px 20px;
-    border-radius: 5px;
-   }
-  .zkCreatvity .zkContainer .zkRow {
-    flex-direction: column;
-     }
-     .zkMainSection{
-      
-     }
+ header.zkHeader .zkMainNav ul {
+  
+            flex-direction: column;
+            background: #1f1f1f;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            display: none; 
+        }
+        
+        .burger {
+            display: block;
+        }
+
+       
+        .emNavLinks {
+            display: none;
+            flex-direction: column;
+            background: #1f1f1f;
+            width: 100%;
+            padding: 20px;
+            position: absolute;
+            top: 70px;
+            left: 0;
+        }
+
+       
+        .emNavLinks.active {
+            display: flex;
+        }
+
+        .emNavLinks li a {
+            color: black;
+            padding: 10px 0;
+            display: block;
+        }
+        /* style of zk Creativity */
+        .zkCreatvity .zkContainer .zkRow {
+          margin: 0px;
+          flex-direction: column;
+        }
 }
