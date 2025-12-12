@@ -412,24 +412,24 @@ header.zkHeader .zkMainNav ul li a:hover {
     overflow-x: hidden;
     width: fit-content;
   }
+header.zkHeader {
+  position: static !important;
+  top: auto !important;
+  width: 100%;
+}
   header.zkHeader .zkMainNav ul {
     flex-direction: column;
-    background: #1f1f1f;
-    position: absolute;
+    background: #7961ae;
     top: 70px;
     left: 0;
     width: 100%;
-    display: none;
+    
   }
 
-  .burger {
-    display: block;
-  }
-
-  .emNavLinks {
-    display: none;
+  .zkNavLinks {
+    display: flex;
     flex-direction: column;
-    background: #1f1f1f;
+    background: #7961ae;
     width: 100%;
     padding: 20px;
     position: absolute;
@@ -437,14 +437,12 @@ header.zkHeader .zkMainNav ul li a:hover {
     left: 0;
   }
 
-  .emNavLinks.active {
-    display: flex;
-  }
 
-  .emNavLinks li a {
-    color: black;
+
+  .zkNavLinks li a {
+    color: #ffffff;
     padding: 10px 0;
-    display: block;
+    
   }
   /* style of zk Creativity */
  
