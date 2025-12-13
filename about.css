@@ -115,3 +115,28 @@ header.zkHeader .zkMainNav ul li a:hover{
     box-shadow: 0 10px 15px rgba(217, 136, 88, 0.25);
 }
 /* this is the end of header */
+/* style of about */
+.zkAboutVizenta .zkDivAbout {
+    background-color: #00c2cb;
+    color: #ffffff;
+    height: 400px;
+    padding-bottom: 40px;
+    padding-top: 100px;
+    font-size:large;
+
+}
+.zkAboutVizenta .zkDivAbout h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    font-family: rubik bold;
+}
+.zkAboutVizenta .zkDivAbout p{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+/* end of first section  */
