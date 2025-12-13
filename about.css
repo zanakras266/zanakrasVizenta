@@ -117,7 +117,7 @@ header.zkHeader .zkMainNav ul li a:hover{
 /* this is the end of header */
 /* style of about */
 .zkAboutVizenta .zkDivAbout {
-    background-color: #00c2cb;
+    background-color: #ac92d2;
     color: #ffffff;
     height: 400px;
     padding-bottom: 40px;
@@ -140,3 +140,60 @@ header.zkHeader .zkMainNav ul li a:hover{
 
 }
 /* end of first section  */
+/* style of zkCardsAbout section */
+
+.zkCardsAbout .zkTitle{
+     text-align: center;
+     font-size: 40px;
+     font-family: rubik bold;
+     color: #7961ae;
+}
+.zkContainerCards .zkRowCard{
+    display: flex;
+    gap: 10px;
+    align-items: stretch; 
+    padding: 20px;
+    text-align: justify;
+    padding: 30px;
+}
+
+
+
+/* target both naming variants*/
+.zkContainerCards .zkRowCard > .zkFirstCard,
+.zkContainerCards .zkRowCard > .zkSecondCard,
+.zkContainer .zkRowCards .zkFirstCard,
+.zkContainer .zkRowCards .zkSecondCard {
+    flex: 1 1 50%; /* equal width */
+    height: 320px; /* same height for both cards*/
+    align-items: center;
+    
+}
+
+/* make images fill the card */
+.zkContainerCards .zkRowCard img,
+.zkContainerCards .zkRowCards img {
+    display: block;
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    margin: 40px auto; /* centers horizontally and preserves spacing */
+    
+}
+ .zkRowCard a{
+     font-family: rubik semi bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: var(--sixth-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+ }
+.zkRowCard a:hover {
+    transform: translateY(-3px);
+  background-color: var(--fourth-color);
+}
+/* done */
