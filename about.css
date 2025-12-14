@@ -226,5 +226,95 @@ header.zkHeader .zkMainNav ul li a:hover {
   line-height: 1.5;
 }
  /* end of this section */
+.zkCeo {
+  background-color: var(--fourth-color);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.zkCeo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.zkCeo h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: rubik bold;
+}
+.zkCeo p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.zkCeo a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: var(--sixth-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: rubik semi bold;
+  transition: background-color 0.3s, transform 0.3s;
+  
+}
+.zkCeo a:hover {
+  transform: translateY(-3px);
+  background-color: white;
+}
+/* end of about section */
+/* footer style */
+.zkFooter {
+  background-color: var(--sixth-color);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
+/* end of footer style */
 
 
+@media screen and (max-width: 768px) {
+  header.zkHeader .zkMainNav ul {
+    flex-direction: column;
+    background: #7961ae;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .zkNavLinks {
+    display: flex;
+    flex-direction: column;
+    background: #7961ae;
+  }
+
+  .zkNavLinks li a {
+    color: #ffffff;
+    padding: 10px 0;
+  }
+  .zkContainerCards .zkRowCard{
+    flex-direction: column;
+
+  }
+  .zkWhoCards{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
