@@ -1,187 +1,171 @@
-:root{
-    --primary-color: #00c2cb;
-    --secondary-color:  #84cfb4;
-    --third-color: #fec560;
-    --fourth-color: #ac92d2;
-    --fifth-color: #6dbea6;
-    --sixth-color: #7961ae;
-    --seventh-color: #fc9f66;    
+:root {
+  --primary-color: #00c2cb;
+  --secondary-color: #84cfb4;
+  --third-color: #fec560;
+  --fourth-color: #ac92d2;
+  --fifth-color: #6dbea6;
+  --sixth-color: #7961ae;
+  --seventh-color: #fc9f66;
 }
 /* declaration of fonts */
 @font-face {
-    font-family: rubik black;
-    src: url(./fonts/Rubik-Black.ttf);
+  font-family: rubik black;
+  src: url(./fonts/Rubik-Black.ttf);
 }
 @font-face {
-    font-family: rubik black italic;
-    src: url(./fonts/Rubik-BlackItalic.ttf);
+  font-family: rubik black italic;
+  src: url(./fonts/Rubik-BlackItalic.ttf);
 }
 @font-face {
-    font-family: rubik bold;
-    src: url(./fonts/Rubik-Bold.ttf);
+  font-family: rubik bold;
+  src: url(./fonts/Rubik-Bold.ttf);
 }
 @font-face {
-    font-family: rubik bold italic;
-    src: url(./fonts/Rubik-BoldItalic.ttf);
+  font-family: rubik bold italic;
+  src: url(./fonts/Rubik-BoldItalic.ttf);
 }
 @font-face {
-    font-family: rubik extra bold;
-    src: url(./fonts/Rubik-ExtraBold.ttf);
+  font-family: rubik extra bold;
+  src: url(./fonts/Rubik-ExtraBold.ttf);
 }
 @font-face {
-    font-family: rubik extra bold italic;
-    src: url(./fonts/Rubik-ExtraBoldItalic.ttf);
+  font-family: rubik extra bold italic;
+  src: url(./fonts/Rubik-ExtraBoldItalic.ttf);
 }
 @font-face {
-    font-family: rubik italic;
-    src: url(./fonts/Rubik-Italic.ttf);
+  font-family: rubik italic;
+  src: url(./fonts/Rubik-Italic.ttf);
 }
 @font-face {
-    font-family: rubik light;
-    src: url(./fonts/Rubik-Light.ttf);
+  font-family: rubik light;
+  src: url(./fonts/Rubik-Light.ttf);
 }
 @font-face {
-    font-family: rubik light face;
-    src: url(./fonts/Rubik-LightItalic.ttf);
+  font-family: rubik light face;
+  src: url(./fonts/Rubik-LightItalic.ttf);
 }
 @font-face {
-    font-family: rubik medium;
-    src: url(./fonts/Rubik-Medium.ttf);
+  font-family: rubik medium;
+  src: url(./fonts/Rubik-Medium.ttf);
 }
 @font-face {
-    font-family: rubik medium italic;
-    src: url(./fonts/Rubik-MediumItalic.ttf);
+  font-family: rubik medium italic;
+  src: url(./fonts/Rubik-MediumItalic.ttf);
 }
 @font-face {
-    font-family: rubik regular;
-    src: url(./fonts/Rubik-Regular.ttf);
+  font-family: rubik regular;
+  src: url(./fonts/Rubik-Regular.ttf);
 }
 @font-face {
-    font-family: rubik semi bold;
-    src: url(./fonts/Rubik-SemiBold.ttf);
+  font-family: rubik semi bold;
+  src: url(./fonts/Rubik-SemiBold.ttf);
 }
 @font-face {
-    font-family: rubik semi bold italic;
-    src: url(./fonts/Rubik-SemiBoldItalic.ttf);
+  font-family: rubik semi bold italic;
+  src: url(./fonts/Rubik-SemiBoldItalic.ttf);
 }
-body{
-    font-family: rubik black;
-    padding: 0%;
-    background-color: rgb(206, 121, 212);
+body {
+  font-family: rubik black;
+  padding: 0%;
+  background-color: rgb(206, 121, 212);
 }
 /* header style */
 
-header.zkHeader{
-    background-color:#7961ae ;
-    padding: 10px 20px;
-    position: sticky;
+header.zkHeader {
+  background-color: #7961ae;
+  padding: 10px 20px;
+  position: sticky;
 }
-header.zkHeader .zkMainNav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header.zkHeader .zkMainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header.zkHeader .zkLogo{
-    display: flex;
-    align-items: center;
+header.zkHeader .zkLogo {
+  display: flex;
+  align-items: center;
 }
-header.zkHeader .zkLogo img{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    margin-right: 10px;
+header.zkHeader .zkLogo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-header.zkHeader .zkMainNav ul{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+header.zkHeader .zkMainNav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-header.zkHeader .zkMainNav ul li{
-    margin: 0 15px;
+header.zkHeader .zkMainNav ul li {
+  margin: 0 15px;
 }
-header.zkHeader .zkMainNav ul li a{
-    text-decoration: none;
-    font-family: rubik semi bold;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s;
-    text-shadow: 0.3s;
+header.zkHeader .zkMainNav ul li a {
+  text-decoration: none;
+  font-family: rubik semi bold;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+  text-shadow: 0.3s;
 }
-header.zkHeader .zkMainNav ul li a:hover{
-    transform: translateY(4px);
-    color: var(--third-color);
-    display: inline-block;
-    box-shadow: 0 10px 15px rgba(217, 136, 88, 0.25);
+header.zkHeader .zkMainNav ul li a:hover {
+  transform: translateY(4px);
+  color: var(--third-color);
+  display: inline-block;
+  box-shadow: 0 10px 15px rgba(217, 136, 88, 0.25);
 }
 /* this is the end of header */
 /* style of about */
 .zkAboutVizenta .zkDivAbout {
-    background-color: #ac92d2;
-    color: #ffffff;
-    height: 400px;
-    padding-bottom: 40px;
-    padding-top: 100px;
-    font-size:large;
-
+  background-color: #ac92d2;
+  color: #ffffff;
+  height: 400px;
+  padding-bottom: 40px;
+  padding-top: 100px;
+  font-size: large;
 }
-.zkAboutVizenta .zkDivAbout h1{
-    text-align: center;
-    padding: 10px;
-    font-size: 50px;
-    font-family: rubik bold;
+.zkAboutVizenta .zkDivAbout h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  font-family: rubik bold;
 }
-.zkAboutVizenta .zkDivAbout p{
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-
+.zkAboutVizenta .zkDivAbout p {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 /* end of first section  */
 /* style of zkCardsAbout section */
 
-.zkCardsAbout .zkTitle{
-     text-align: center;
-     font-size: 40px;
-     font-family: rubik bold;
-     color: #7961ae;
+.zkCardsAbout .zkTitle {
+  text-align: center;
+  font-size: 40px;
+  font-family: rubik bold;
+  color: #7961ae;
 }
-.zkContainerCards .zkRowCard{
-    display: flex;
-    gap: 10px;
-    align-items: stretch; 
-    padding: 20px;
-    text-align: justify;
-    padding: 30px;
-}
-
-
-
-/* target both naming variants*/
-.zkContainerCards .zkRowCard > .zkFirstCard,
-.zkContainerCards .zkRowCard > .zkSecondCard,
-.zkContainer .zkRowCards .zkFirstCard,
-.zkContainer .zkRowCards .zkSecondCard {
-    flex: 1 1 50%; /* equal width */
-    height: 320px; /* same height for both cards*/
-    align-items: center;
-    
+.zkContainerCards .zkRowCard {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  padding: 20px;
+  text-align: justify;
+  padding: 30px;
 }
 
 /* make images fill the card */
 .zkContainerCards .zkRowCard img,
 .zkContainerCards .zkRowCards img {
-    display: block;
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    margin: 40px auto; /* centers horizontally and preserves spacing */
-    
+  display: block;
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  margin: 40px auto; /* centers horizontally and preserves spacing */
 }
- .zkRowCard a{
-     font-family: rubik semi bold;
+.zkRowCard a {
+  font-family: rubik semi bold;
   font-size: 18px;
   padding: 10px 20px;
   margin-top: 20px;
@@ -191,9 +175,8 @@ header.zkHeader .zkMainNav ul li a:hover{
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
- }
+}
 .zkRowCard a:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
   background-color: var(--fourth-color);
 }
-/* done */
