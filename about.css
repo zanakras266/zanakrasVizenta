@@ -118,7 +118,7 @@ header.zkHeader .zkMainNav ul li a:hover {
 /* style of about */
 .zkAboutVizenta .zkDivAbout {
   background-color: #ac92d2;
-  color: #ffffff;
+  color: #000000;
   height: 400px;
   padding-bottom: 40px;
   padding-top: 100px;
@@ -144,7 +144,8 @@ header.zkHeader .zkMainNav ul li a:hover {
   text-align: center;
   font-size: 40px;
   font-family: rubik bold;
-  color: #7961ae;
+  color: #000000;
+  padding: 20px;
 }
 .zkContainerCards .zkRowCard {
   display: flex;
@@ -198,9 +199,8 @@ header.zkHeader .zkMainNav ul li a:hover {
   max-width: 600px;
   margin: 0 auto 50px;
   color: #6b6b6b;
-  font-size: 20px ;
+  font-size: 20px;
   text-align: center;
-  
 }
 
 .zkWhoCards {
@@ -213,7 +213,7 @@ header.zkHeader .zkMainNav ul li a:hover {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .zkWhoCard h3 {
@@ -225,10 +225,10 @@ header.zkHeader .zkMainNav ul li a:hover {
   color: #6b6b6b;
   line-height: 1.5;
 }
- /* end of this section */
+/* end of this section */
 .zkCeo {
-  background-color: var(--fourth-color);
-  color: white;
+  background-color: #f0e6fa;
+  color: #000000;
   padding: 80px 20px;
   text-align: center;
 }
@@ -256,15 +256,14 @@ header.zkHeader .zkMainNav ul li a:hover {
   padding: 12px 25px;
   background-color: var(--sixth-color);
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: rubik semi bold;
   transition: background-color 0.3s, transform 0.3s;
-  
 }
 .zkCeo a:hover {
   transform: translateY(-3px);
-  background-color: white;
+  background-color: var(--fourth-color);
 }
 /* end of about section */
 /* footer style */
@@ -288,7 +287,6 @@ header.zkHeader .zkMainNav ul li a:hover {
 }
 /* end of footer style */
 
-
 @media screen and (max-width: 768px) {
   header.zkHeader .zkMainNav ul {
     flex-direction: column;
@@ -309,11 +307,10 @@ header.zkHeader .zkMainNav ul li a:hover {
     color: #ffffff;
     padding: 10px 0;
   }
-  .zkContainerCards .zkRowCard{
+  .zkContainerCards .zkRowCard {
     flex-direction: column;
-
   }
-  .zkWhoCards{
+  .zkWhoCards {
     flex-direction: column;
     gap: 20px;
   }
