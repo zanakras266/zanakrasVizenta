@@ -140,3 +140,63 @@ header.zkHeader .zkMainNav ul li a:hover {
   line-height: 1.6;
   color: #333;
 }
+.zkAiManage .zkTextAi h1 {
+  font-family: rubik bold;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #7961ae;
+  padding-top: 100px;
+}
+.zkAiManage .zkTextAi p {
+  font-family: rubik light;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.zkAiManage .zkAiManageRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  flex-direction: row;
+  padding: 70px;
+}
+.zkAiManage .zkAiManageRow h1 {
+  font-family: rubik bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #7961ae;
+}
+.zkAiManage .zkAiManageRow p {
+  font-family: rubik light;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+.zkIconsAi .zkIconRow {
+  text-align: center;
+}
+.zkIconsAi .zkColIcon {
+  display: inline-block;
+  margin: 20px;
+}
+.zkIconsAi .zkColIcon i {
+  font-size: 40px;
+  color: #7961ae;
+  margin-bottom: 10px;
+}
+.zkIconsAi .zkColIcon h2 {
+  font-family: rubik bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.zkIconsAi .zkColIcon p {
+  font-family: rubik light;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
