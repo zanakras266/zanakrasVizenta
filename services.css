@@ -1,3 +1,4 @@
+/* theme color variables */
 :root {
   --primary-color: #00c2cb;
   --secondary-color: #84cfb4;
@@ -7,7 +8,8 @@
   --sixth-color: #7961ae;
   --seventh-color: #fc9f66;
 }
-/* declaration of fonts */
+
+/* custom font declarations */
 @font-face {
   font-family: rubik black;
   src: url(./fonts/Rubik-Black.ttf);
@@ -64,42 +66,50 @@
   font-family: rubik semi bold italic;
   src: url(./fonts/Rubik-SemiBoldItalic.ttf);
 }
+
+/* base page styles */
 body {
   font-family: rubik black;
   padding: 0%;
   background-color: rgb(206, 121, 212);
 }
-/* header style */
 
+/* header container */
 header.zkHeader {
   background-color: #7961ae;
   padding: 10px 20px;
   position: sticky;
 }
+/* main navigation layout */
 header.zkHeader .zkMainNav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+/* logo area */
 header.zkHeader .zkLogo {
   display: flex;
   align-items: center;
 }
+/* logo image */
 header.zkHeader .zkLogo img {
   height: 60px;
   width: 60px;
   border-radius: 50%;
   margin-right: 10px;
 }
+/* nav list styling */
 header.zkHeader .zkMainNav ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
+/* nav list item */
 header.zkHeader .zkMainNav ul li {
   margin: 0 15px;
 }
+/* nav link styling */
 header.zkHeader .zkMainNav ul li a {
   text-decoration: none;
   font-family: rubik semi bold;
@@ -108,14 +118,16 @@ header.zkHeader .zkMainNav ul li a {
   transition: color 0.3s;
   text-shadow: 0.3s;
 }
+/* header link hover/active states */
+/* nav link hover */
 header.zkHeader .zkMainNav ul li a:hover {
   transform: translateY(4px);
   color: var(--third-color);
   display: inline-block;
   box-shadow: 0 10px 15px rgba(217, 136, 88, 0.25);
 }
-/* this is the end of header */
-/* services section style */
+
+/* designed section row layout */
 .zkDesigned .zkDesignedRow {
   display: flex;
   align-items: center;
@@ -124,22 +136,27 @@ header.zkHeader .zkMainNav ul li a:hover {
   flex-direction: row;
   padding: 70px;
 }
+/* designed section image */
 .zkDesigned .zkContainer img {
   width: 400px;
   height: auto;
   border-radius: 10px;
 }
+/* designed section heading */
 .zkDesigned .zkContainer .zkColOne h1 {
   font-family: rubik bold;
   font-size: 36px;
   margin-bottom: 20px;
 }
+/* designed section paragraph */
 .zkDesigned .zkContainer .zkColOne p {
   font-family: rubik light;
   font-size: 18px;
   line-height: 1.6;
   color: #333;
 }
+
+/* AI manage text heading */
 .zkAiManage .zkTextAi h1 {
   font-family: rubik bold;
   font-size: 36px;
@@ -148,6 +165,7 @@ header.zkHeader .zkMainNav ul li a:hover {
   color: #7961ae;
   padding-top: 100px;
 }
+/* AI manage paragraph */
 .zkAiManage .zkTextAi p {
   font-family: rubik light;
   font-size: 18px;
@@ -156,6 +174,7 @@ header.zkHeader .zkMainNav ul li a:hover {
   text-align: center;
   padding-bottom: 20px;
 }
+/* AI manage row layout */
 .zkAiManage .zkAiManageRow {
   display: flex;
   align-items: center;
@@ -164,39 +183,182 @@ header.zkHeader .zkMainNav ul li a:hover {
   flex-direction: row;
   padding: 70px;
 }
+/* AI manage row heading */
 .zkAiManage .zkAiManageRow h1 {
   font-family: rubik bold;
   font-size: 24px;
   margin-bottom: 15px;
   color: #7961ae;
 }
+/* AI manage row paragraph */
 .zkAiManage .zkAiManageRow p {
   font-family: rubik light;
   font-size: 16px;
   line-height: 1.6;
   color: #333;
 }
+
+/* icons row container */
 .zkIconsAi .zkIconRow {
   text-align: center;
 }
+/* icon column */
 .zkIconsAi .zkColIcon {
   display: inline-block;
   margin: 20px;
 }
+/* icon style */
 .zkIconsAi .zkColIcon i {
   font-size: 40px;
   color: #7961ae;
   margin-bottom: 10px;
 }
+/* icon title */
 .zkIconsAi .zkColIcon h2 {
   font-family: rubik bold;
   font-size: 20px;
   margin-bottom: 10px;
   color: #333;
 }
+/* icon paragraph */
 .zkIconsAi .zkColIcon p {
   font-family: rubik light;
   font-size: 16px;
   line-height: 1.6;
   color: #333;
+}
+/* start of footer */
+.zkFooter {
+  background-color: #7961ae;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* page/layout */
+  body {
+    padding: 2%;
+  }
+
+  header.zkHeader {
+    padding: 10px 12px;
+  }
+
+  /* nav: stack logo + menu */
+  header.zkHeader .zkMainNav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  header.zkHeader .zkLogo {
+    justify-content: flex-start;
+  }
+
+  header.zkHeader .zkLogo img {
+    height: 48px;
+    width: 48px;
+  }
+
+  /* vertical nav list for small screens */
+  header.zkHeader .zkMainNav ul {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+  }
+
+  header.zkHeader .zkMainNav ul li {
+    margin: 6px 0;
+  }
+
+  header.zkHeader .zkMainNav ul li a {
+    font-size: 15px;
+    display: block;
+    padding: 6px 8px;
+  }
+
+  /* Designed + AI manage sections: stack columns */
+  .zkDesigned .zkDesignedRow,
+  .zkAiManage .zkAiManageRow {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 18px;
+  }
+
+  .zkDesigned .zkContainer img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .zkDesigned .zkContainer .zkColOne h1,
+  .zkAiManage .zkTextAi h1 {
+    font-size: 28px;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .zkDesigned .zkContainer .zkColOne p,
+  .zkAiManage .zkTextAi p,
+  .zkAiManage .zkAiManageRow p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .zkAiManage .zkAiManageRow h1 {
+    font-size: 20px;
+  }
+
+  /* icons: wrap and center */
+  .zkIconsAi .zkIconRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px 12px;
+  }
+
+  .zkIconsAi .zkColIcon {
+    width: calc(50% - 24px);
+    box-sizing: border-box;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zkIconsAi .zkColIcon i {
+    font-size: 34px;
+  }
+
+  .zkIconsAi .zkColIcon h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .zkFooter {
+    padding: 18px 12px;
+  }
+
+  .zkFooter .zkFooterDiv p {
+    font-size: 18px;
+  }
 }
