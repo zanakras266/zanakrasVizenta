@@ -284,30 +284,51 @@ header.zkHeader .zkMainNav ul li a:hover {
 .zkCards .zkCardContanier {
   padding: 40px 20px;
 }
-.zkCards .zkCardRow {
+.zkCards .zkCardContanier .zkCardRow {
   display: flex;
+  flex-direction: row;
   gap: 20px;
+  align-items: stretch;
   justify-content: space-between;
-  align-items: center; /* make all cards same height */
-  flex-wrap: nowrap;
-  padding: 20px;
 }
-.zkCards .zkCardContanier .zkFirstCard,
-.zkSecondCard,
-.zkThirdCard,
-.zkFourthCard {
+
+/* make each card take equal space and stay responsive */
+.zkCards .zkCardContanier .zkCardRow > div {
+  flex: 1 1 calc((100% - 3 * 20px) / 4);
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #000;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   display: flex;
-  justify-content: justify;
-  margin: 20px;
-  border: 2px solid rgb(228, 139, 217);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #ffffff;
-  flex-basis: 30%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ensure icon and content layout */
+.zkCards .zkCardContanier .zkCardRow > div i {
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.zkCards .zkCardContanier .zkCardRow > div .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 0 auto;
+}
+
+/* keep button at the bottom of the card */
+.zkCards .zkCardContanier .zkCardRow > div .card-body a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* subtle lift on hover (keeps existing hover rules compatible) */
+.zkCards .zkCardContanier .zkCardRow > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 /* style of icons */
 .zkCards .zkCardContanier .zkFirstCard i,
@@ -412,18 +433,17 @@ header.zkHeader .zkMainNav ul li a:hover {
     overflow-x: hidden;
     width: fit-content;
   }
-header.zkHeader {
-  position: static !important;
-  top: auto !important;
-  width: 100%;
-}
+  header.zkHeader {
+    position: static !important;
+    top: auto !important;
+    width: 100%;
+  }
   header.zkHeader .zkMainNav ul {
     flex-direction: column;
     background: #7961ae;
     top: 70px;
     left: 0;
     width: 100%;
-    
   }
 
   .zkNavLinks {
@@ -437,15 +457,12 @@ header.zkHeader {
     left: 0;
   }
 
-
-
   .zkNavLinks li a {
     color: #ffffff;
     padding: 10px 0;
-    
   }
   /* style of zk Creativity */
- 
+
   .zkCreatvity {
     margin-left: 0; /* override desktop offset on small screens */
   }
@@ -465,12 +482,11 @@ header.zkHeader {
     font-size: 18px;
     line-height: 1.6;
   }
-  .zkCreatvity .zkContainer video{
+  .zkCreatvity .zkContainer video {
     display: none;
   }
   /* style of four cards */
-  .zkCards .zkCardContanier .zkCardRow{
-  flex-direction: column;
+  .zkCards .zkCardContanier .zkCardRow {
+    flex-direction: column;
   }
-
 }
