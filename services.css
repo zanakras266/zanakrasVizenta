@@ -333,15 +333,15 @@ header.zkHeader .zkMainNav ul li a:hover {
     justify-content: center;
     gap: 16px;
     padding: 10px 12px;
+    align-items: center;
+    max-width: 100%;
   }
 
-  .zkIconsAi .zkColIcon {
-    width: calc(50% - 24px);
+  .zkIconsAi {
     box-sizing: border-box;
     margin: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .zkIconsAi .zkColIcon i {
@@ -351,6 +351,20 @@ header.zkHeader .zkMainNav ul li a:hover {
   .zkIconsAi .zkColIcon h2 {
     font-size: 18px;
     text-align: center;
+  }
+
+  .zkIconsAi .zkColTwo p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .zkAiManage .zkAiManageRow h1 {
+    text-align: center;
+  }
+  .zkAiColOne .zkDesignVideo {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 8px;
   }
 
   .zkFooter {
