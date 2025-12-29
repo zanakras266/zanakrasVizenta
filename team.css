@@ -1,117 +1,297 @@
-:root{
-    --primary-color: #00c2cb;
-    --secondary-color:  #84cfb4;
-    --third-color: #fec560;
-    --fourth-color: #ac92d2;
-    --fifth-color: #6dbea6;
-    --sixth-color: #7961ae;
-    --seventh-color: #fc9f66;    
+:root {
+  --primary-color: #00c2cb;
+  --secondary-color: #84cfb4;
+  --third-color: #fec560;
+  --fourth-color: #ac92d2;
+  --fifth-color: #6dbea6;
+  --sixth-color: #7961ae;
+  --seventh-color: #fc9f66;
 }
 /* declaration of fonts */
 @font-face {
-    font-family: rubik black;
-    src: url(./fonts/Rubik-Black.ttf);
+  font-family: rubik black;
+  src: url(./fonts/Rubik-Black.ttf);
 }
 @font-face {
-    font-family: rubik black italic;
-    src: url(./fonts/Rubik-BlackItalic.ttf);
+  font-family: rubik black italic;
+  src: url(./fonts/Rubik-BlackItalic.ttf);
 }
 @font-face {
-    font-family: rubik bold;
-    src: url(./fonts/Rubik-Bold.ttf);
+  font-family: rubik bold;
+  src: url(./fonts/Rubik-Bold.ttf);
 }
 @font-face {
-    font-family: rubik bold italic;
-    src: url(./fonts/Rubik-BoldItalic.ttf);
+  font-family: rubik bold italic;
+  src: url(./fonts/Rubik-BoldItalic.ttf);
 }
 @font-face {
-    font-family: rubik extra bold;
-    src: url(./fonts/Rubik-ExtraBold.ttf);
+  font-family: rubik extra bold;
+  src: url(./fonts/Rubik-ExtraBold.ttf);
 }
 @font-face {
-    font-family: rubik extra bold italic;
-    src: url(./fonts/Rubik-ExtraBoldItalic.ttf);
+  font-family: rubik extra bold italic;
+  src: url(./fonts/Rubik-ExtraBoldItalic.ttf);
 }
 @font-face {
-    font-family: rubik italic;
-    src: url(./fonts/Rubik-Italic.ttf);
+  font-family: rubik italic;
+  src: url(./fonts/Rubik-Italic.ttf);
 }
 @font-face {
-    font-family: rubik light;
-    src: url(./fonts/Rubik-Light.ttf);
+  font-family: rubik light;
+  src: url(./fonts/Rubik-Light.ttf);
 }
 @font-face {
-    font-family: rubik light face;
-    src: url(./fonts/Rubik-LightItalic.ttf);
+  font-family: rubik light face;
+  src: url(./fonts/Rubik-LightItalic.ttf);
 }
 @font-face {
-    font-family: rubik medium;
-    src: url(./fonts/Rubik-Medium.ttf);
+  font-family: rubik medium;
+  src: url(./fonts/Rubik-Medium.ttf);
 }
 @font-face {
-    font-family: rubik medium italic;
-    src: url(./fonts/Rubik-MediumItalic.ttf);
+  font-family: rubik medium italic;
+  src: url(./fonts/Rubik-MediumItalic.ttf);
 }
 @font-face {
-    font-family: rubik regular;
-    src: url(./fonts/Rubik-Regular.ttf);
+  font-family: rubik regular;
+  src: url(./fonts/Rubik-Regular.ttf);
 }
 @font-face {
-    font-family: rubik semi bold;
-    src: url(./fonts/Rubik-SemiBold.ttf);
+  font-family: rubik semi bold;
+  src: url(./fonts/Rubik-SemiBold.ttf);
 }
 @font-face {
-    font-family: rubik semi bold italic;
-    src: url(./fonts/Rubik-SemiBoldItalic.ttf);
+  font-family: rubik semi bold italic;
+  src: url(./fonts/Rubik-SemiBoldItalic.ttf);
 }
-body{
-    font-family: rubik black;
-    padding: 0%;
-    background-color: rgb(206, 121, 212);
+body {
+  font-family: rubik black;
+  padding: 0%;
+  background-color: rgb(206, 121, 212);
 }
 /* header style */
 
-header.zkHeader{
-    background-color:#7961ae ;
-    padding: 10px 20px;
-    position: sticky;
+header.zkHeader {
+  background-color: #7961ae;
+  padding: 10px 20px;
+  position: sticky;
 }
-header.zkHeader .zkMainNav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header.zkHeader .zkMainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header.zkHeader .zkLogo{
-    display: flex;
-    align-items: center;
+header.zkHeader .zkLogo {
+  display: flex;
+  align-items: center;
 }
-header.zkHeader .zkLogo img{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    margin-right: 10px;
+header.zkHeader .zkLogo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-header.zkHeader .zkMainNav ul{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+header.zkHeader .zkMainNav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-header.zkHeader .zkMainNav ul li{
-    margin: 0 15px;
+header.zkHeader .zkMainNav ul li {
+  margin: 0 15px;
 }
-header.zkHeader .zkMainNav ul li a{
-    text-decoration: none;
-    font-family: rubik semi bold;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s;
-    text-shadow: 0.3s;
+header.zkHeader .zkMainNav ul li a {
+  text-decoration: none;
+  font-family: rubik semi bold;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+  text-shadow: 0.3s;
 }
-header.zkHeader .zkMainNav ul li a:hover{
-    transform: translateY(4px);
-    color: var(--third-color);
-    display: inline-block;
-    box-shadow: 0 10px 15px rgba(217, 136, 88, 0.25);
+header.zkHeader .zkMainNav ul li a:hover {
+  transform: translateY(4px);
+  color: var(--third-color);
+  display: inline-block;
 }
 /* this is the end of header */
+/* team section style */
+/* team section style */
+.zkTeam {
+  padding: 6rem 0;
+  background: radial-gradient(
+      600px 300px at 10% 10%,
+      rgba(0, 194, 203, 0.08),
+      transparent 20%
+    ),
+    radial-gradient(
+      500px 250px at 90% 80%,
+      rgba(121, 97, 174, 0.12),
+      transparent 18%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(121, 97, 174, 0.95) 0%,
+      rgba(0, 194, 203, 0.06) 100%
+    );
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* container sizing consistent with the site */
+.zkContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+/* Heading — bold, modern, human-feel with soft glow */
+.zkTeam h1 {
+  font-family: "rubik extra bold", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.45);
+  margin-bottom: 1.5rem;
+}
+
+/* row layout — center cards and allow wrapping for many team members */
+.zkTeamRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* individual card — glassy, elevated, friendly proportions */
+.zkTeamCeo {
+  width: min(420px, 92%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 16px;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(13, 12, 24, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: transform 320ms cubic-bezier(0.2, 0.9, 0.28, 1),
+    box-shadow 320ms ease;
+  position: relative;
+  backdrop-filter: blur(6px);
+}
+
+/* lift effect on hover to make it feel alive */
+.zkTeamCeo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(12, 10, 30, 0.6);
+}
+
+/* portrait styling — circular, crisp border and subtle floating animation */
+.zkTeamCeo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  transition: transform 420ms cubic-bezier(0.2, 0.9, 0.28, 1),
+    box-shadow 300ms ease;
+  margin-bottom: 1rem;
+  animation: floatY 6s ease-in-out infinite;
+}
+
+/* tiny interactive pop on portrait hover */
+.zkTeamCeo img:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* name and role styling */
+.zkTeamCeo h2 {
+  font-family: "rubik semi bold";
+  font-size: 1.25rem;
+  margin: 0.25rem 0;
+  color: #fff;
+  letter-spacing: 0.2px;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.zkTeamCeo p {
+  font-family: "rubik regular";
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.975rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* decorative accent bar using theme colors */
+.zkTeamCeo::after {
+  content: "";
+  width: 72px;
+  height: 6px;
+  display: block;
+  margin: 1.25rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary-color), var(--third-color));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  opacity: 0.98;
+}
+.zkFooter {
+  background-color: #7961ae;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
+
+/* make sure it looks great on small screens */
+@media (max-width: 580px) {
+  .zkTeam {
+    padding: 3.25rem 0;
+  }
+  .zkTeamCeo {
+    padding: 1.5rem;
+    width: 94%;
+  }
+  .zkTeamCeo img {
+    width: 130px;
+    height: 130px;
+  }
+  .zkTeam h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* subtle floating animation for a human, organic feel */
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

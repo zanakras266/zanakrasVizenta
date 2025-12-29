@@ -112,7 +112,6 @@ header.zkHeader .zkMainNav ul li a:hover {
   transform: translateY(4px);
   color: var(--third-color);
   display: inline-block;
-  box-shadow: 0 10px 15px rgba(217, 136, 88, 0.25);
 }
 /* this is the end of header */
 /* style of about */
