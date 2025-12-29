@@ -76,6 +76,7 @@ header.zkHeader {
   padding: 10px 20px;
   position: sticky;
   top: 0%;
+  z-index: 1000;
 }
 header.zkHeader .zkMainNav {
   display: flex;

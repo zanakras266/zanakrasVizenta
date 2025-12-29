@@ -70,11 +70,12 @@ body {
   background-color: rgb(206, 121, 212);
 }
 /* header style */
-
 header.zkHeader {
   background-color: #7961ae;
   padding: 10px 20px;
   position: sticky;
+  top: 0%;
+  z-index: 1000;
 }
 header.zkHeader .zkMainNav {
   display: flex;
