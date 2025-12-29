@@ -186,3 +186,21 @@ header.zkHeader .zkMainNav ul li a:hover {
 .zkContactForm button:hover {
   background: #554fd8;
 }
+.zkFooter {
+  background-color: #6c63ff;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}

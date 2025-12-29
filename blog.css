@@ -116,3 +116,308 @@ header.zkHeader .zkMainNav ul li a:hover {
   display: inline-block;
 }
 /* this is the end of header */
+/* Top Stories Section */
+.zkTopStories {
+  padding: 32px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.zkTopStories h1 {
+  font-family: rubik black;
+  color: var(--primary-color);
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.zkTopStories .card-group {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* equal heights */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cards: equal width/height, polished visuals */
+.zkTopStories .card {
+  flex: 1 1 300px; /* allow grow, shrink, base width */
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+/* Hover lift */
+.zkTopStories .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+}
+
+/* Image: consistent aspect, cover */
+.zkTopStories .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Body stretches so footer (timestamp) sits at bottom) */
+.zkTopStories .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+/* Title / text styling */
+.zkTopStories .card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+  font-family: rubik semi bold;
+  line-height: 1.2;
+}
+
+.zkTopStories .card-text {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  flex: 0 0 auto;
+}
+
+/* Minor meta text anchored to the bottom of the card body */
+.zkTopStories .card .text-body-secondary {
+  color: #777;
+  font-size: 0.82rem;
+  margin-top: 6px;
+  align-self: flex-start;
+}
+/* ENGINEERING SECTION */
+.zkEngineering {
+  padding: 32px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.zkEngineering h1 {
+  font-family: rubik black;
+  color: var(--primary-color);
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+.zkEngineering p {
+  font-family: rubik regular;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+.zkEngineering .card-group {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.zkEngineering .card {
+  flex: 1 1 300px;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.zkEngineering .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+}
+
+.zkEngineering .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.zkEngineering .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+.zkEngineering .card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+  font-family: rubik semi bold;
+  line-height: 1.2;
+}
+
+.zkEngineering .card-text {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  flex: 0 0 auto;
+}
+
+.zkEngineering .card .text-body-secondary {
+  color: #777;
+  font-size: 0.82rem;
+  margin-top: 6px;
+  align-self: flex-start;
+}
+/* DAILY LIFE SECTION */
+.zkDaily {
+  padding: 32px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.zkDaily h1 {
+  font-family: rubik black;
+  color: var(--primary-color);
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.zkDaily p {
+  font-family: rubik regular;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+.zkDaily .card-group {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.zkDaily .card {
+  flex: 1 1 300px;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.zkDaily .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+}
+
+.zkDaily .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.zkDaily .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+.zkDaily .card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+  font-family: rubik semi bold;
+  line-height: 1.2;
+}
+
+.zkDaily .card-text {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  flex: 0 0 auto;
+}
+
+.zkDaily .card .text-body-secondary {
+  color: #777;
+  font-size: 0.82rem;
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+/* footer style */
+.zkFooter {
+  background-color: var(--sixth-color);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
+/* end of footer style */
+/* Responsive: stack cards on narrow screens */
+
+/* Prevent extremely narrow cards on small screens: stack vertically */
+@media (max-width: 768px) {
+  .zkTopStories .card-group {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .zkTopStories .card {
+    max-width: none;
+    width: 100%;
+  }
+  /* Engineering Section */
+  .zkEngineering .card-group {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .zkEngineering .card {
+    max-width: none;
+    width: 100%;
+  }
+  /* Daily Life Section */
+  .zkDaily .card-group {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .zkDaily .card {
+    max-width: none;
+    width: 100%;
+  }
+}
