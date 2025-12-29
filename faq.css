@@ -116,3 +116,147 @@ header.zkHeader .zkMainNav ul li a:hover {
   display: inline-block;
 }
 /* this is the end of header */
+/* Core FAQ styles (questions, answers, container, transitions) */
+.zkFaqs {
+  background: linear-gradient(
+    180deg,
+    rgba(121, 81, 162, 0.95) 0%,
+    rgba(121, 81, 162, 0.85) 40%,
+    rgba(172, 146, 210, 0.12) 100%
+  );
+  padding: 60px 20px;
+  color: #f8f6ff;
+}
+.zkFaqsContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.zkFaqsContainer h2 {
+  font-family: rubik bold;
+  font-size: 32px;
+  margin-bottom: 18px;
+  color: #fff;
+  text-align: center;
+}
+.zkFaqItem {
+  margin: 12px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  box-shadow: 0 6px 18px rgba(11, 8, 24, 0.12);
+}
+.zkFaqQuestion {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgba(121, 81, 162, 0.9),
+    rgba(140, 100, 200, 0.85)
+  );
+  color: #fff;
+  padding: 16px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 220ms ease, transform 160ms ease;
+}
+.zkFaqQuestion:hover {
+  transform: translateY(-2px);
+}
+.zkFaqQuestion:focus {
+  outline: 3px solid rgba(172, 146, 210, 0.2);
+  outline-offset: 2px;
+}
+.zkFaqQuestion::after {
+  content: "\25B6";
+  transform: rotate(0deg);
+  transition: transform 200ms ease;
+  font-size: 16px;
+}
+.zkFaqItem.open .zkFaqQuestion::after {
+  transform: rotate(90deg);
+}
+.zkFaqAnswer {
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 360ms ease, opacity 300ms ease, padding 260ms ease;
+  color: rgba(255, 255, 255, 0.94);
+}
+.zkFaqItem.open .zkFaqAnswer {
+  padding: 14px 20px 18px 20px;
+  max-height: 480px;
+  opacity: 1;
+}
+
+.zkFaqsContainer {
+  position: relative;
+}
+.zkFaqsContainer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+  width: 380px;
+  height: 120px;
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.06),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(172, 146, 210, 0.06),
+      transparent 25%
+    );
+  filter: blur(18px);
+  z-index: 0;
+  pointer-events: none;
+}
+.zkFaqsContainer > * {
+  position: relative;
+  z-index: 1;
+}
+.zkFaqQuestion {
+  border-left: 4px solid rgba(255, 255, 255, 0.06);
+}
+.zkFaqItem.open .zkFaqQuestion {
+  background: linear-gradient(
+    90deg,
+    rgba(121, 81, 162, 0.96),
+    rgba(140, 100, 200, 0.95)
+  );
+  box-shadow: 0 10px 30px rgba(99, 45, 120, 0.18);
+}
+/* footer style */
+.zkFooter {
+  background-color: #7961ae;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
+/*end of footer */

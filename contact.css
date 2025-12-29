@@ -116,3 +116,73 @@ header.zkHeader .zkMainNav ul li a:hover {
   display: inline-block;
 }
 /* this is the end of header */
+.zkContact {
+  padding: 80px 20px;
+}
+
+.zkContactContainer {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.zkContactInfo {
+  flex: 1;
+}
+
+.zkContactInfo h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: rubik bold;
+}
+
+.zkContactInfo p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.zkInfo p {
+  margin-bottom: 10px;
+}
+
+.zkContactForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.zkContactForm input,
+.zkContactForm textarea {
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: rubik light;
+}
+
+.zkContactForm textarea {
+  resize: none;
+  height: 120px;
+}
+
+.zkContactForm button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: rubik light;
+}
+
+.zkContactForm button:hover {
+  background: #554fd8;
+}
