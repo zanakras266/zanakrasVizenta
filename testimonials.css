@@ -226,9 +226,28 @@ header.zkHeader .zkMainNav ul li a:hover {
   background: linear-gradient(135deg, var(--primary-color), var(--fifth-color));
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+/* footer style */
+.zkFooter {
+  background-color: #7961ae;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
 
 /* Media Queries */
-@media (max-width: 640px) {
+@media screen and(max-width: 768px) {
   .zkTestimonials {
     padding: 40px 14px;
   }

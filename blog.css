@@ -393,7 +393,7 @@ header.zkHeader .zkMainNav ul li a:hover {
 /* Responsive: stack cards on narrow screens */
 
 /* Prevent extremely narrow cards on small screens: stack vertically */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .zkTopStories .card-group {
     flex-direction: column;
     gap: 18px;

@@ -428,7 +428,30 @@ header.zkHeader .zkMainNav ul li a:hover {
 }
 /* end of footer style */
 /* responsive adjustments */
-@media (max-width: 840px) {
+@media screen and (max-width: 768px) {
+  .zkTopTopics {
+    gap: 14px;
+    padding: 16px;
+  }
+  .zkTopTopics .card img {
+    height: 150px;
+  }
+  .zkTopTopics .card .card-body {
+    padding: 14px;
+  }
+  .zkTopTopics .card .card-title {
+    font-size: 1rem;
+  }
+  .zkTopTopics .card .card-text {
+    font-size: 0.92rem;
+  }
+  .zkGetInTouch .card .card-body {
+    padding: 14px;
+  }
+  .zkGetInTouch .btn {
+    width: 100%;
+    text-align: center;
+  }
   .zkExplore .card-img {
     height: 280px;
   }
@@ -438,9 +461,6 @@ header.zkHeader .zkMainNav ul li a:hover {
   .zkExplore .card-img-overlay .card-title {
     font-size: 1.05rem;
   }
-}
-
-@media (max-width: 576px) {
   .zkExplore {
     padding: 16px 12px;
   }
@@ -457,35 +477,5 @@ header.zkHeader .zkMainNav ul li a:hover {
   }
   .zkExplore .card-img-overlay .card-text {
     font-size: 0.95rem;
-  }
-}
-/* responsive tweaks */
-@media (max-width: 576px) {
-  .zkGetInTouch .card .card-body {
-    padding: 14px;
-  }
-  .zkGetInTouch .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* responsive adjustments */
-@media (max-width: 640px) {
-  .zkTopTopics {
-    gap: 14px;
-    padding: 16px;
-  }
-  .zkTopTopics .card img {
-    height: 150px;
-  }
-  .zkTopTopics .card .card-body {
-    padding: 14px;
-  }
-  .zkTopTopics .card .card-title {
-    font-size: 1rem;
-  }
-  .zkTopTopics .card .card-text {
-    font-size: 0.92rem;
   }
 }
