@@ -116,3 +116,98 @@ header.zkHeader .zkMainNav ul li a:hover {
   display: inline-block;
 }
 /* this is the end of header */
+/* Terms section */
+.zkTerms {
+  padding: 64px 20px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 203, 0.04),
+    rgba(132, 207, 180, 0.02)
+  );
+}
+
+.zkTerms .zkTermsContainer {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 30, 0.06);
+  color: #222;
+}
+
+/* Headings & text */
+.zkTerms h1 {
+  margin: 0 0 8px;
+  color: var(--primary-color);
+  font-family: rubik semi bold;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.zkTerms h2 {
+  margin: 20px 0 8px;
+  color: var(--third-color);
+  font-family: rubik medium;
+  font-size: 18px;
+}
+
+.zkTerms p {
+  margin: 0 0 14px;
+  font-family: rubik regular;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Links */
+.zkTerms a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 194, 203, 0.18);
+  transition: color 0.18s, border-color 0.18s;
+}
+.zkTerms a:hover {
+  color: var(--third-color);
+  border-bottom-color: rgba(254, 197, 96, 0.35);
+}
+/* footer style */
+.zkFooter {
+  background-color: var(--sixth-color);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .zkTerms {
+    padding: 32px 12px;
+  }
+  .zkTerms .zkTermsContainer {
+    padding: 24px;
+  }
+  .zkTerms h1 {
+    font-size: 22px;
+  }
+  .zkTerms h2 {
+    font-size: 16px;
+  }
+  .zkTerms p {
+    font-size: 15px;
+  }
+}
