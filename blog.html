@@ -16,34 +16,113 @@
       crossorigin="anonymous" />
   </head>
   <body id="ZK">
-    <!-- this is a header -->
-    <header class="zkHeader">
-      <nav class="zkMainNav">
-        <div class="zkLogo">
-          <a href="./index.html">
+    <!-- Header from bootstrap -->
+    <header class="zkHeaderB">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="./index.html">
             <img
               src="./images/logo.png"
-              alt="Logo" />
+              alt="Vizenta logo"
+              width="48"
+              height="48"
+              class="d-inline-block align-text-top" />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#zkNavbar"
+            aria-controls="zkNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse"
+            id="zkNavbar">
+            <!-- ms-3 adds a gap between the logo and the links; remove me-auto so links remain left-aligned -->
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./services.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./gallery.html"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./team.html"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./testimonials.html"
+                  >Testimonials</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./faq.html"
+                  >FAQs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./terms.html"
+                  >Terms</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="zkNavList">
-          <li class="zkNavItem"><a href="./index.html">Home</a></li>
-          <li class="zkNavItem"><a href="./about.html">About</a></li>
-          <li class="zkNavItem"><a href="./services.html">Services</a></li>
-          <li class="zkNavItem"><a href="./blog.html">Blog</a></li>
-          <li class="zkNavItem"><a href="./gallery.html">Gallery</a></li>
-          <li class="zkNavItem"><a href="./team.html">Team</a></li>
-          <li class="zkNavItem">
-            <a href="./testimonials.html">Testimonials</a>
-          </li>
-          <li class="zkNavItem"><a href="./faq.html">FAQ</a></li>
-          <li class="zkNavItem"><a href="./contact.html">Contact</a></li>
-          <li class="zkNavItems">
-            <a href="./terms.html">Terms & Policies</a>
-          </li>
-        </ul>
       </nav>
     </header>
+
     <!-- Top Stories Section -->
     <section class="zkTopStories">
       <h1>Top Stories</h1>
@@ -261,6 +340,11 @@
       </div>
     </footer>
   </body>
+  <!-- include Bootstrap JS bundle so the toggler works -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
   <script
     src="https://kit.fontawesome.com/3c63bc7a17.js"
     crossorigin="anonymous"></script>

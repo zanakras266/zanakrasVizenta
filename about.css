@@ -69,52 +69,92 @@ body {
   padding: 0%;
   background-color: rgb(206, 121, 212);
 }
-/* header style */
-header.zkHeader {
+
+/* Simple header styling for bootstrap-based header (logo left, links right) */
+.zkHeaderB {
   background-color: #7961ae;
-  padding: 10px 20px;
   position: sticky;
-  top: 0%;
+  top: 0;
   z-index: 1000;
 }
-header.zkHeader .zkMainNav {
+.zkHeaderB .navbar-nav .nav-link.active,
+.zkHeaderB .nav-link.active {
+  color: #fc9f66;
+}
+
+.zkHeaderB .navbar-nav .nav-link.active:hover,
+.zkHeaderB .nav-link.active:hover {
+  color: #fc9f66;
+}
+/* make the navbar a flex container so brand sits left and collapse sits right */
+.zkHeaderB .navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* ensure brand has some spacing from the nav */
+.zkHeaderB .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px; /* gap between logo and nav */
+}
+
+.zkHeaderB .navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: block;
+}
+.navbar-toggler .navbar-toggler-icon {
+  /* override Bootstrap default SVG to render a white hamburger icon */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* ensure the default SVG hamburger (background-image) renders white */
+
+/* push the collapsed/nav area to the far right */
+.zkHeaderB .navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* horizontal nav items with spacing */
+.zkHeaderB .navbar-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* link styling */
+.zkHeaderB .nav-link {
+  font-weight: 600;
+  padding: 6px 8px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-header.zkHeader .zkLogo {
-  display: flex;
-  align-items: center;
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #ffffff;
 }
-header.zkHeader .zkLogo img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin-right: 10px;
+.zkHeaderB .nav-link:hover {
+  border-radius: 6px;
+  color: var(--seventh-color);
 }
-header.zkHeader .zkMainNav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-header.zkHeader .zkMainNav ul li {
-  margin: 0 15px;
-}
-header.zkHeader .zkMainNav ul li a {
-  text-decoration: none;
-  font-family: rubik semi bold;
-  color: white;
-  font-size: 16px;
-  transition: color 0.3s;
-  text-shadow: 0.3s;
-}
-header.zkHeader .zkMainNav ul li a:hover {
-  transform: translateY(4px);
-  color: var(--third-color);
-  display: inline-block;
-}
-/* this is the end of header */
+
+/* tighten navbar spacing */
+/* brand tweaks */
+/* nav links - light, simple, readable */
+
+/* toggler appearance */
+
+/* when the collapse menu is shown on small screens, give it a subtle card look */
+
 /* style of about */
 .zkAboutVizenta .zkDivAbout {
   background-color: #ac92d2;
@@ -288,15 +328,6 @@ header.zkHeader .zkMainNav ul li a:hover {
 /* end of footer style */
 
 @media screen and (max-width: 768px) {
-  header.zkHeader .zkMainNav ul {
-    flex-direction: column;
-    background: #7961ae;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    display: none;
-  }
-
   .zkNavLinks {
     display: flex;
     flex-direction: column;

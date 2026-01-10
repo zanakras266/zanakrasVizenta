@@ -68,123 +68,199 @@ body {
   font-family: rubik black;
   padding: 0%;
   background-color: rgb(206, 121, 212);
-}
-/* header style */
+} /* Form */
 
-header.zkHeader {
+/* Simple header styling for bootstrap-based header (logo left, links right) */
+.zkHeaderB {
   background-color: #7961ae;
-  padding: 10px 20px;
   position: sticky;
-  top: 0%;
+  top: 0;
   z-index: 1000;
 }
-header.zkHeader .zkMainNav {
+.zkHeaderB .navbar-nav .nav-link.active,
+.zkHeaderB .nav-link.active {
+  color: #fc9f66;
+}
+
+.zkHeaderB .navbar-nav .nav-link.active:hover,
+.zkHeaderB .nav-link.active:hover {
+  color: #fc9f66;
+}
+/* make the navbar a flex container so brand sits left and collapse sits right */
+.zkHeaderB .navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* ensure brand has some spacing from the nav */
+.zkHeaderB .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px; /* gap between logo and nav */
+}
+
+.zkHeaderB .navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: block;
+}
+.navbar-toggler .navbar-toggler-icon {
+  /* override Bootstrap default SVG to render a white hamburger icon */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* ensure the default SVG hamburger (background-image) renders white */
+
+/* push the collapsed/nav area to the far right */
+.zkHeaderB .navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* horizontal nav items with spacing */
+.zkHeaderB .navbar-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* link styling */
+.zkHeaderB .nav-link {
+  font-weight: 600;
+  padding: 6px 8px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-header.zkHeader .zkLogo {
-  display: flex;
-  align-items: center;
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #ffffff;
 }
-header.zkHeader .zkLogo img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-header.zkHeader .zkMainNav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-header.zkHeader .zkMainNav ul li {
-  margin: 0 15px;
-}
-header.zkHeader .zkMainNav ul li a {
-  text-decoration: none;
-  font-family: rubik semi bold;
-  color: white;
-  font-size: 16px;
-  transition: color 0.3s;
-  text-shadow: 0.3s;
-}
-header.zkHeader .zkMainNav ul li a:hover {
-  transform: translateY(4px);
-  color: var(--third-color);
-  display: inline-block;
-}
-/* this is the end of header */
-.zkContact {
-  padding: 80px 20px;
+.zkHeaderB .nav-link:hover {
+  border-radius: 6px;
+  color: var(--seventh-color);
 }
 
-.zkContactContainer {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  gap: 50px;
-  background: #ffffff;
-  padding: 50px;
+form.needs-validation {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(250, 250, 250, 0.98)
+  );
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-family: rubik regular;
+  color: #222;
 }
 
-.zkContactInfo {
-  flex: 1;
+/* Labels */
+form.needs-validation .form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: rubik semi bold;
+  color: var(--sixth-color);
+  font-size: 15px;
 }
 
-.zkContactInfo h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  font-family: rubik bold;
-}
-
-.zkContactInfo p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.zkInfo p {
-  margin-bottom: 10px;
-}
-
-.zkContactForm {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.zkContactForm input,
-.zkContactForm textarea {
-  padding: 14px;
-  margin-bottom: 15px;
+/* Inputs / selects */
+form.needs-validation .form-control,
+form.needs-validation .form-select {
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.6rem 0.75rem;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+  box-shadow: none;
+  font-family: rubik regular;
+}
+
+/* Input group */
+form.needs-validation .input-group .input-group-text {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--sixth-color);
+  border-radius: 8px 0 0 8px;
+  font-family: rubik medium;
+}
+form.needs-validation .input-group .form-control {
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Focus */
+form.needs-validation .form-control:focus,
+form.needs-validation .form-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 6px rgba(0, 194, 203, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Checkboxes */
+form.needs-validation .form-check-label {
+  font-family: rubik light;
+  color: #333;
+}
+form.needs-validation .form-check-input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+/* Button */
+form.needs-validation .btn.btn-primary {
+  background: linear-gradient(90deg, var(--primary-color), var(--fifth-color));
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  color: #fff;
+  font-family: rubik semi bold;
+  box-shadow: 0 6px 18px rgba(109, 190, 166, 0.14);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+form.needs-validation .btn.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(109, 190, 166, 0.22);
+}
+
+/* Feedback */
+form.needs-validation .valid-feedback,
+form.needs-validation .invalid-feedback {
   font-size: 14px;
   font-family: rubik light;
 }
-
-.zkContactForm textarea {
-  resize: none;
-  height: 120px;
+form.needs-validation .invalid-feedback {
+  color: #d9534f;
 }
 
-.zkContactForm button {
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background: #6c63ff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-family: rubik light;
+form.needs-validation .is-invalid {
+  border-color: #d9534f !important;
+  box-shadow: 0 0 0 6px rgba(217, 83, 79, 0.06);
+}
+form.needs-validation .is-valid {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 6px rgba(40, 167, 69, 0.06);
 }
 
-.zkContactForm button:hover {
-  background: #554fd8;
+/* Responsive */
+@media (max-width: 767px) {
+  form.needs-validation {
+    padding: 18px;
+    margin: 20px;
+  }
+  form.needs-validation .btn.btn-primary {
+    width: 100%;
+  }
 }
 .zkFooter {
   background-color: #6c63ff;
