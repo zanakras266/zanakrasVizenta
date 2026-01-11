@@ -147,35 +147,43 @@ body {
   color: var(--seventh-color);
 }
 
-/* tighten navbar spacing */
-/* brand tweaks */
-/* nav links - light, simple, readable */
-
-/* toggler appearance */
-
-/* when the collapse menu is shown on small screens, give it a subtle card look */
-
 /* style of about */
 .zkAboutVizenta .zkDivAbout {
-  background-color: #ac92d2;
-  color: #000000;
-  height: 400px;
-  padding-bottom: 40px;
-  padding-top: 100px;
-  font-size: large;
+  /* blue to purple gradient for a simple, modern look */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--sixth-color) 100%
+  );
+  color: rgba(255, 255, 255, 0.95);
+  min-height: 360px;
+  padding: 4.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(27, 38, 65, 0.12);
+  font-size: 1.0625rem; /* ~17px */
 }
+
 .zkAboutVizenta .zkDivAbout h1 {
-  text-align: center;
-  padding: 10px;
-  font-size: 50px;
+  color: #ffffff;
   font-family: rubik bold;
+  font-size: clamp(1.75rem, 4vw, 3rem); /* responsive heading */
+  margin: 0 0 0.5rem;
+  line-height: 1.05;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 .zkAboutVizenta .zkDivAbout p {
-  text-align: center;
-  padding: 10px;
-  font-size: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 900px;
+  margin: 0;
+  padding: 0 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  letter-spacing: 0.1px;
 }
 /* end of first section  */
 /* style of zkCardsAbout section */
@@ -267,44 +275,77 @@ body {
 }
 /* end of this section */
 .zkCeo {
-  background-color: #f0e6fa;
-  color: #000000;
-  padding: 80px 20px;
+  /* match the visual language of .zkAboutVizenta .zkDivAbout */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--sixth-color) 100%
+  );
+  color: rgba(255, 255, 255, 0.95);
+  padding: 4.5rem 1.25rem;
   text-align: center;
+  box-shadow: 0 8px 24px rgba(27, 38, 65, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-height: 360px;
 }
+
 .zkCeo img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  border: 4px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  justify-content: center;
 }
+
 .zkCeo h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  color: #ffffff;
   font-family: rubik bold;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  margin: 0;
+  line-height: 1.05;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 .zkCeo p {
-  font-size: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 900px;
+  margin: 0;
+  padding: 0 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   line-height: 1.6;
+  letter-spacing: 0.1px;
 }
+
+/* Call-to-action/button - consistent with other buttons */
 .zkCeo a {
-  display: inline-block;
-  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
   padding: 12px 25px;
   background-color: var(--sixth-color);
   color: white;
   border-radius: 10px;
   text-decoration: none;
   font-family: rubik semi bold;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 18px rgba(27, 38, 65, 0.12);
+  border: none;
 }
+
 .zkCeo a:hover {
   transform: translateY(-3px);
   background-color: var(--fourth-color);
+  box-shadow: 0 12px 28px rgba(27, 38, 65, 0.14);
 }
+
 /* end of about section */
 /* footer style */
 .zkFooter {
@@ -344,5 +385,19 @@ body {
   .zkWhoCards {
     flex-direction: column;
     gap: 20px;
+  }
+  .zkCeo {
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+  .zkCeo img {
+    width: 120px;
+    height: 120px;
+  }
+  .zkCeo h2 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+  .zkCeo p {
+    font-size: 1rem;
   }
 }

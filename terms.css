@@ -81,11 +81,6 @@ body {
 .zkHeaderB .nav-link.active {
   color: #fc9f66;
 }
-
-.zkHeaderB .navbar-nav .nav-link.active:hover,
-.zkHeaderB .nav-link.active:hover {
-  color: #fc9f66;
-}
 /* make the navbar a flex container so brand sits left and collapse sits right */
 .zkHeaderB .navbar {
   display: flex;
@@ -146,7 +141,6 @@ body {
   border-radius: 6px;
   color: var(--seventh-color);
 }
-
 /* Terms section */
 .zkTerms {
   padding: 64px 20px;
