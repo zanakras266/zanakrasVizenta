@@ -209,7 +209,7 @@ body {
   box-shadow: 0 12px 30px rgba(11, 8, 24, 0.25);
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 700px;
 }
 .zkMainSection .zkMainDiv {
   display: flex;
@@ -219,7 +219,7 @@ body {
   text-align: center;
   padding: 40px 20px;
   position: relative;
-  top: 250px;
+  top: 180px;
   bottom: 50px;
 }
 .zkMainSection .zkMainDiv h1 {
