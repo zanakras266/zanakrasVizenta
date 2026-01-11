@@ -251,6 +251,24 @@ form.needs-validation .is-valid {
   border-color: #28a745 !important;
   box-shadow: 0 0 0 6px rgba(40, 167, 69, 0.06);
 }
+.zkFooter {
+  background-color: #7961ae;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.zkFooter .zkFooterDiv p {
+  margin: 0;
+  font-family: rubik light;
+  font-size: 30px;
+}
+.zkFooter .zkFooterSection a {
+  color: white;
+  text-decoration: none;
+}
 
 /* Responsive */
 @media (max-width: 767px) {
@@ -263,10 +281,10 @@ form.needs-validation .is-valid {
   }
 }
 .zkFooter {
-  background-color: #6c63ff;
+  background-color: #7961ae;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 60px 20px;
   position: relative;
   bottom: 0;
   width: 100%;

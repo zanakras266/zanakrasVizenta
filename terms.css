@@ -111,8 +111,6 @@ body {
   height: 1.5em;
 }
 
-/* ensure the default SVG hamburger (background-image) renders white */
-
 /* push the collapsed/nav area to the far right */
 .zkHeaderB .navbar-collapse {
   display: flex;
