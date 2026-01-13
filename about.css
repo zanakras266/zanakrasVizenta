@@ -369,6 +369,19 @@ body {
 /* end of footer style */
 
 @media screen and (max-width: 768px) {
+  /* header stlye  */
+  .zkHeaderB .navbar-collapse {
+    justify-content: flex-start;
+  }
+  .zkHeaderB .navbar-nav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .zkHeaderB .nav-link {
+    padding: 10px 12px;
+    width: 100%;
+  }
   .zkNavLinks {
     display: flex;
     flex-direction: column;

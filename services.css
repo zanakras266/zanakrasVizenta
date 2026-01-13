@@ -67,8 +67,8 @@
 
 body {
   font-family: rubik black;
-  padding: 0%;
-  background-color: rgb(206, 121, 212);
+  padding: 0;
+  margin: 0;
 }
 
 /* Simple header styling for bootstrap-based header (logo left, links right) */
@@ -262,10 +262,19 @@ body {
 /* end of footer style */
 
 @media screen and (max-width: 768px) {
-  body {
-    padding: 2%;
+  /* header stlye  */
+  .zkHeaderB .navbar-collapse {
+    justify-content: flex-start;
   }
-
+  .zkHeaderB .navbar-nav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .zkHeaderB .nav-link {
+    padding: 10px 12px;
+    width: 100%;
+  }
   .zkDesigned .zkDesignedRow,
   .zkAiManage .zkAiManageRow {
     flex-direction: column;

@@ -201,7 +201,7 @@ body {
   background-color: var(--sixth-color);
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 40px 20px;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -217,7 +217,20 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
+@media screen and (max-width: 768px) {
+  /* header stlye  */
+  .zkHeaderB .navbar-collapse {
+    justify-content: flex-start;
+  }
+  .zkHeaderB .navbar-nav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .zkHeaderB .nav-link {
+    padding: 10px 12px;
+    width: 100%;
+  }
   .zkTerms {
     padding: 32px 12px;
   }

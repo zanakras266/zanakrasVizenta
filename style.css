@@ -267,13 +267,12 @@ body {
   color: #000000;
 }
 .zkCreatvity .zkContainer .zkRow .zkColOne {
-  width: 50%;
   margin-bottom: 20px;
   padding: 15px;
   text-align: justify;
 }
 .zkCreatvity .zkContainer .zkRow .zkColTwo video {
-  width: 60%;
+  width: 100%;
   height: auto;
 }
 .zkCreatvity .zkContainer .zkRow .zkColOne h2 {
@@ -441,35 +440,160 @@ body {
 }
 /* contact section */
 .zkLastQuestion {
-  background-color: var(--fourth-color);
-  padding: 60px 20px;
-  color: #000000;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
   text-align: center;
+  color: #fff;
+  /* soft diagonal gradient that compliments theme */
+  background: linear-gradient(
+    135deg,
+    rgba(121, 97, 174, 0.95) 0%,
+    rgba(172, 146, 210, 0.95) 45%,
+    rgba(0, 194, 203, 0.06) 100%
+  );
+  border-radius: 18px;
+  margin: 40px 20px;
+  box-shadow: 0 18px 60px rgba(11, 8, 24, 0.35),
+    inset 0 2px 12px rgba(255, 255, 255, 0.03);
+  isolation: isolate;
 }
+
+/* decorative soft color blobs to give depth */
+.zkLastQuestion::before,
+.zkLastQuestion::after {
+  content: "";
+  position: absolute;
+  filter: blur(64px) saturate(120%);
+  opacity: 0.28;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.zkLastQuestion::before {
+  width: 520px;
+  height: 520px;
+  left: -12%;
+  top: -18%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(0, 194, 203, 0.7),
+    rgba(0, 194, 203, 0.15) 40%,
+    transparent 60%
+  );
+}
+.zkLastQuestion::after {
+  width: 520px;
+  height: 520px;
+  right: -10%;
+  bottom: -18%;
+  background: radial-gradient(
+    circle at 70% 70%,
+    rgba(172, 146, 210, 0.7),
+    rgba(172, 146, 210, 0.12) 40%,
+    transparent 65%
+  );
+}
+
+/* inner container with glassy card feel for content */
+.zkLastQuestion .zkQuestionContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(6px) saturate(120%);
+  box-shadow: 0 10px 30px rgba(11, 8, 24, 0.28);
+  display: grid;
+  gap: 18px;
+  align-items: center;
+}
+
+/* heading: strong, crisp and slightly embossed */
 .zkLastQuestion .zkQuestionContainer h2 {
   font-family: rubik bold;
   font-size: 36px;
-  margin-bottom: 20px;
+  margin: 0;
+  color: var(--zk-hero-text-contrast, rgba(255, 255, 255, 0.95));
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.02);
+  letter-spacing: -0.2px;
+  line-height: 1.05;
 }
+
+/* supporting paragraph: readable and airy */
 .zkLastQuestion .zkQuestionContainer p {
   font-family: rubik light;
   font-size: 18px;
-  margin-bottom: 30px;
+  margin: 0 auto;
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
 }
+
+/* primary CTA button styled to match theme with subtle motion */
 .zkLastQuestion .zkQuestionContainer a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 26px;
+  margin: 6px auto 0;
+  border-radius: 10px;
+  color: #fff;
   text-decoration: none;
-  border-radius: 5px;
   font-family: rubik semi bold;
-  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  background: linear-gradient(
+    90deg,
+    var(--seventh-color) 0%,
+    var(--third-color) 100%
+  );
+  box-shadow: 0 10px 30px rgba(252, 159, 102, 0.18),
+    0 2px 6px rgba(0, 0, 0, 0.18);
+  transform-origin: center;
+  transition: transform 260ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 260ms ease, filter 260ms ease, background-position 360ms ease;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  border: 0;
+  cursor: pointer;
 }
-.zkLastQuestion .zkQuestionContainer a:hover {
-  background-color: rgb(228, 139, 217);
-  transform: translateY(-3px);
+
+/* subtle icon added via pseudo-element (arrow) */
+.zkLastQuestion .zkQuestionContainer a::after {
+  content: "→";
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 260ms ease;
+  opacity: 0.98;
 }
+
+/* hover/focus interactions */
+.zkLastQuestion .zkQuestionContainer a:hover,
+.zkLastQuestion .zkQuestionContainer a:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 48px rgba(172, 146, 210, 0.2),
+    0 6px 18px rgba(0, 0, 0, 0.28);
+  filter: saturate(115%);
+  background-position: 100% 50%;
+  outline: none;
+}
+.zkLastQuestion .zkQuestionContainer a:hover::after {
+  transform: translateX(6px);
+}
+
+/* accessible focus ring */
+.zkLastQuestion .zkQuestionContainer a:focus-visible {
+  box-shadow: 0 10px 30px rgba(11, 8, 24, 0.36),
+    0 0 0 4px rgba(0, 194, 203, 0.12);
+}
+
 /* start of footer */
 .zkFooter {
   background-color: #7961ae;
@@ -515,26 +639,66 @@ body {
     margin-left: 0; /* override desktop offset on small screens */
   }
 
+  /* ensure the row stacks its children vertically on small screens */
+  .zkCreatvity .zkContainer .zkRow {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+
   .zkCreatvity .zkContainer {
     padding: 20px 16px;
   }
   .zkCreatvity .zkContainer .zkColOne {
+    display: block;
     color: #000;
     width: 100%;
     max-width: 720px;
     margin: 0 auto 16px;
     box-sizing: border-box;
     padding: 18px;
-    flex-basis: 100%;
     text-align: left;
     font-size: 18px;
     line-height: 1.6;
   }
+
+  /* make media/content take full width and center */
+  .zkCreatvity .zkContainer .zkRow > * {
+    width: 100%;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
   .zkCreatvity .zkContainer video {
-    display: none;
+    width: 100%;
+    height: auto;
+    max-width: 720px;
+    margin: 0 auto;
+    display: block;
   }
   /* style of four cards */
   .zkCards .zkCardContanier .zkCardRow {
     flex-direction: column;
+  }
+  .zkLastQuestion {
+    padding: 40px 14px;
+    margin: 22px 10px;
+    border-radius: 12px;
+  }
+  .zkLastQuestion .zkQuestionContainer {
+    padding: 22px;
+    gap: 12px;
+  }
+  .zkLastQuestion .zkQuestionContainer h2 {
+    font-size: 28px;
+  }
+  .zkLastQuestion .zkQuestionContainer p {
+    font-size: 16px;
+  }
+  .zkLastQuestion .zkQuestionContainer a {
+    width: 100%;
+    padding: 12px 18px;
   }
 }

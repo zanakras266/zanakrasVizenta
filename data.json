@@ -1,0 +1,11 @@
+{
+    "contacts": {
+    "Firstname": "Zana",
+    "Lastname": "Krasniqi",
+    "Email": "zana.krasniqi@example.com",
+    "city": "Pristina",
+    "country": "Kosovo",
+    "zip": "10000"
+
+    }
+}

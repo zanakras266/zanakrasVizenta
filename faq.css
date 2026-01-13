@@ -216,7 +216,7 @@ body {
   transform: rotate(90deg);
 }
 .zkFaqAnswer {
-  padding: 0 20px;
+  padding: 0 24px 22px 24px;
   font-size: 15px;
   line-height: 1.6;
   overflow: hidden;
@@ -291,3 +291,18 @@ body {
   text-decoration: none;
 }
 /*end of footer */
+@media screen and (max-width: 768px) {
+  /* header stlye  */
+  .zkHeaderB .navbar-collapse {
+    justify-content: flex-start;
+  }
+  .zkHeaderB .navbar-nav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .zkHeaderB .nav-link {
+    padding: 10px 12px;
+    width: 100%;
+  }
+}

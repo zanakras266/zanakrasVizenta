@@ -258,6 +258,7 @@ form.needs-validation .is-valid {
   padding: 20px 10px;
   position: relative;
   bottom: 0;
+  top: 100px;
   width: 100%;
 }
 .zkFooter .zkFooterDiv p {
@@ -270,25 +271,6 @@ form.needs-validation .is-valid {
   text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 767px) {
-  form.needs-validation {
-    padding: 18px;
-    margin: 20px;
-  }
-  form.needs-validation .btn.btn-primary {
-    width: 100%;
-  }
-}
-.zkFooter {
-  background-color: #7961ae;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 .zkFooter .zkFooterDiv p {
   margin: 0;
   font-family: rubik light;
@@ -297,4 +279,27 @@ form.needs-validation .is-valid {
 .zkFooter .zkFooterSection a {
   color: white;
   text-decoration: none;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  /* header stlye  */
+  .zkHeaderB .navbar-collapse {
+    justify-content: flex-start;
+  }
+  .zkHeaderB .navbar-nav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .zkHeaderB .nav-link {
+    padding: 10px 12px;
+    width: 100%;
+  }
+  form.needs-validation {
+    padding: 18px;
+    margin: 20px;
+  }
+  form.needs-validation .btn.btn-primary {
+    width: 100%;
+  }
 }
