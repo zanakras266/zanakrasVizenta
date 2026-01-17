@@ -281,7 +281,8 @@ form.needs-validation .is-valid {
   text-decoration: none;
 }
 /* Responsive */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
   /* header stlye  */
   .zkHeaderB .navbar-collapse {
     justify-content: flex-start;
@@ -295,11 +296,106 @@ form.needs-validation .is-valid {
     padding: 10px 12px;
     width: 100%;
   }
+
+  /* form: make compact and stacked */
   form.needs-validation {
+    margin: 16px;
     padding: 18px;
-    margin: 20px;
+    border-radius: 10px;
+    max-width: calc(100% - 32px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
   }
+
+  /* stack grid/row columns */
+  form.needs-validation .row,
+  form.needs-validation .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ensure bootstrap column children take full width on mobile */
+  form.needs-validation .row > [class*="col"],
+  form.needs-validation .form-row > [class*="col"] {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  /* inputs: slightly larger tap targets */
+  form.needs-validation .form-control,
+  form.needs-validation .form-select {
+    padding: 0.75rem 0.85rem;
+    font-size: 15px;
+  }
+
+  /* input-group: make full width and stack if needed */
+  form.needs-validation .input-group {
+    width: 100%;
+    display: flex;
+    gap: 0;
+  }
+  form.needs-validation .input-group .input-group-text {
+    border-radius: 8px 0 0 8px;
+    min-width: 46px;
+    justify-content: center;
+  }
+  form.needs-validation .input-group .form-control {
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* labels and feedback sizing */
+  form.needs-validation .form-label {
+    font-size: 14px;
+  }
+  form.needs-validation .valid-feedback,
+  form.needs-validation .invalid-feedback {
+    font-size: 13px;
+  }
+
+  /* checkboxes & radios: increase spacing */
+  form.needs-validation .form-check {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  /* primary button: full width and more tappable */
   form.needs-validation .btn.btn-primary {
     width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(109, 190, 166, 0.12);
+    border-radius: 10px;
+  }
+
+  /* reduce transform/hover exaggeration on small devices */
+  form.needs-validation .btn.btn-primary:hover {
+    transform: none;
+    box-shadow: 0 8px 18px rgba(109, 190, 166, 0.16);
+  }
+
+  /* footer: tighten spacing and scale text */
+  .zkFooter {
+    padding: 14px 10px;
+    top: auto;
+  }
+  .zkFooter .zkFooterDiv p {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  /* small tweaks for accessibility */
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select,
+  button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  /* avoid heavy shadows on small screens for performance */
+  * {
+    will-change: auto;
   }
 }
